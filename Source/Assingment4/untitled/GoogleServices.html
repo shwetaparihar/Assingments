@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="weather">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Directions service</title>
+    <link href="css/GoogleServiceStyle.css" rel="stylesheet">
+    <script src="js/angular.js"></script>
+    <script src="js/GoogleServices.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjvIprdgG-KLsbkkDgvE1ItAokdxIMn9w&signed_in=true" async defer></script>
+
+</head>
+<body ng-controller="weatherctrl">
+<div id="floating-panel">
+    <b>Start: </b> <input type="text" id="start1" placeholder="CityName(full eg Kansas City)">
+                    <input type="text" id="start2" placeholder="State(abbreviated eg MO)">
+    <!--<select id="start">-->
+        <!--<option value="chicago, il">Chicago</option>-->
+        <!--<option value="st louis, mo">St Louis</option>-->
+        <!--<option value="joplin, mo">Joplin, MO</option>-->
+        <!--<option value="oklahoma city, ok">Oklahoma City</option>-->
+        <!--<option value="amarillo, tx">Amarillo</option>-->
+        <!--<option value="gallup, nm">Gallup, NM</option>-->
+        <!--<option value="flagstaff, az">Flagstaff, AZ</option>-->
+        <!--<option value="winona, az">Winona</option>-->
+        <!--<option value="kingman, az">Kingman</option>-->
+        <!--<option value="barstow, ca">Barstow</option>-->
+        <!--<option value="san bernardino, ca">San Bernardino</option>-->
+        <!--<option value="los angeles, ca">Los Angeles</option>-->
+    <!--</select>-->
+    <b>End: </b><input type="text" id="end1" placeholder="CityName(full eg Kansas City)">
+    <input type="text" id="end2" placeholder="State(abbreviated eg MO)">
+    <!--<select id="end">-->
+        <!--<option value="chicago, il">Chicago</option>-->
+        <!--<option value="st louis, mo">St Louis</option>-->
+        <!--<option value="joplin, mo">Joplin, MO</option>-->
+        <!--<option value="oklahoma city, ok">Oklahoma City</option>-->
+        <!--<option value="amarillo, tx">Amarillo</option>-->
+        <!--<option value="gallup, nm">Gallup, NM</option>-->
+        <!--<option value="flagstaff, az">Flagstaff, AZ</option>-->
+        <!--<option value="winona, az">Winona</option>-->
+        <!--<option value="kingman, az">Kingman</option>-->
+        <!--<option value="barstow, ca">Barstow</option>-->
+        <!--<option value="san bernardino, ca">San Bernardino</option>-->
+        <!--<option value="los angeles, ca">Los Angeles</option>-->
+    <!--</select>-->
+    <!--<button  ng-init="getWeather()">Go!</button>-->
+    <button  ng-click="getWeather()" onclick="initMap()">Go!</button>
+</div>
+<div id="map" ></div>
+
+<div>
+    <!--<button id="btn" ng-click="getWeather()">Show Weather</button>-->
+    <
+    <br/>
+    <br/>
+    <div class="weatherModule">
+        <p class="currentConditions" ng-bind-html-unsafe="currentweather.html"></p>
+        <div class="currentIcon" ng-bind-html-unsafe="currentIcon.html"></div>
+        <p class="currentConditions" ng-bind-html-unsafe="currentweather1.html"></p>
+        <div class="currentIcon" ng-bind-html-unsafe="currentIcon1.html"></div>
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

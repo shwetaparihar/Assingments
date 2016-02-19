@@ -1,0 +1,39 @@
+html, body {
+    height: 70%;
+    margin: 0;
+    padding: 0;
+}
+#map {
+    height: 100%;
+}
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+.weatherModule {
+    background:#f2f2f2;
+    height:250px;
+    width:250px;
+    border: 1px dashed #ccc;
+    /*padding: 1em;*/
+}
+.currentConditions {
+    float: left;
+}
+.weatherModule {
+    padding: 1em;
+}
+.currentIcon {
+    float: left;
+    margin: 0 .75em;
+}
+
